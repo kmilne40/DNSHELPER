@@ -1,0 +1,86 @@
+Kev’s DNS Helper - Training Manual
+
+Welcome!  
+Kev’s DNS Helper is a simple command-line tool designed to help you quickly perform common DNS and WHOIS lookups. Whether you’re troubleshooting a domain, exploring mail server records, or just learning how DNS works, this tool provides a clear, user-friendly interface.
+
+---
+
+What Does It Do?
+
+- DNS Lookup (A Records): Find the IP addresses associated with a domain name.
+- MX Lookup: Identify which mail servers handle email for a domain.
+- NS Lookup: Find the authoritative name servers for a domain.
+- SOA Lookup: Retrieve the Start of Authority record, which shows details about the domain’s DNS zone.
+- Reverse DNS Lookup: Given an IP address, find its associated domain name (if any).
+- WHOIS Lookup: Retrieve registration details about the domain (like registrar and creation date).
+- Get All Information: Run all of the above lookups at once for a domain.
+- Zone Transfer Attempt: Try to transfer the domain’s entire DNS zone for debugging or educational purposes (note: most servers will not allow this for security reasons).
+
+---
+
+How to Use the Tool
+
+1. Run the Program  
+   Open your terminal (Command Prompt or PowerShell on Windows, Terminal on macOS/Linux), navigate to the directory containing the script, and run:
+   ```bash
+   python3 dnshelper.py
+   ```
+   *Note:* The script name may differ depending on how you saved it.
+
+2. View the Main Menu  
+   After launching, you’ll see a decorative ASCII banner and a menu of options numbered 1 through 9.
+
+3. Choose an Option  
+   Simply type the number of the action you want to take and press Enter. For example, to perform a DNS lookup, type:
+   ```  
+   1  
+   ```
+   and press Enter.
+
+4. Enter the Domain or IP as Requested  
+   The tool will prompt you for a domain name (like `example.com`) or an IP address (like `8.8.8.8`) depending on the chosen function.
+   
+   Tip: Ensure that the domain format is correct (for example, `google.com` is valid; `google..com` or just `google` is not).  
+   For IP addresses, make sure you enter a valid IPv4 or IPv6 address.
+
+5. View the Results  
+   The tool will display the results in a neat, tabulated format. For instance, DNS lookups will show a list of IP addresses, and WHOIS lookups will show registrar, creation date, and other useful details.
+
+6. Continue or Exit  
+   After viewing the results, you’ll return to the main menu. You can:
+   - Perform another lookup by choosing another menu option.
+   - Exit the tool by selecting option 9.
+
+---
+
+ Error Handling & Troubleshooting
+
+- Invalid Input: If you type in a domain that doesn’t exist or format something incorrectly, the tool will let you know.
+
+- DNS/WHOIS Errors: Occasionally, lookups may fail due to server issues, firewall restrictions, or non-existent records. If this happens, you’ll see a friendly error message. Just try a different domain or check your network connection.
+
+- Zone Transfer Issues: Don’t be surprised if zone transfers fail. Most servers block them for security reasons. It’s normal!
+
+---
+
+ Tips & Best Practices
+
+- Experiment and Learn: Try running WHOIS lookups on different domains to see how registration details vary across different top-level domains.
+- Compare DNS Records: Use DNS, MX, and NS lookups to understand a domain’s configuration. For example, see if changing a domain’s nameserver updates the returned data after a few hours.
+- Combine Lookups: The “Get All Information” option (7) is a quick way to get a snapshot of all the important details about a domain, including DNS and WHOIS data.
+
+---
+
+ Safety and Security
+
+- No Sensitive Data Collected: The tool doesn’t store your queries; it just performs lookups and shows you the results.
+
+- Validate Your Inputs: The tool checks that you enter well-formed domains and valid IP addresses to prevent errors and potential security issues.
+
+- Logging Errors: Behind the scenes, errors are logged securely for debugging purposes, without exposing unnecessary details to the user.
+
+---
+
+ That’s It!
+
+With Kev’s DNS Helper, you have a convenient and straightforward way to explore DNS and WHOIS records. Enjoy experimenting, learning, and troubleshooting your domains! :)
