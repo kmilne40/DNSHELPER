@@ -15,7 +15,7 @@ What Does It Do?
 - WHOIS Lookup: Retrieve registration details about the domain (like registrar and creation date).
 - Get All Information: Run all of the above lookups at once for a domain.
 - Zone Transfer Attempt: Try to transfer the domain’s entire DNS zone for debugging or educational purposes (note: most servers will not allow this for security reasons).
-
+- Brute force subdomains: Attempt to brute force subdomains based on the words in the wordlist.txt file.
 ---
 
 How to Use the Tool
